@@ -1,0 +1,40 @@
+spring:
+  redis:
+    redisson:
+      config: |
+        singleServerConfig:
+          address: "redis://localhost:6379"
+          database: 0
+          connectionPoolSize: 64  # 连接池大小
+          connectionMinimumIdleSize: 24  # 最小空闲连接数
+          idleConnectionTimeout: 10000  # 空闲连接超时时间
+          connectTimeout: 3000  # 连接超时时间
+          timeout: 3000  # 操作超时时间
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/store?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    username: root
+    password: 123456
+  activemq:
+    broker-url: tcp://127.0.0.1:61616
+    user: admin
+    password: admin
+  cloud:
+    nacos:
+      discovery:
+        namespace: xue
+        server-addr: 127.0.0.1:8848
+      config:
+        namespace: xue
+        server-addr: 127.0.0.1:8848
+        file-extension: yml
+        group: DEFAULT_GROUP
+        data-id: store-service-local
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.example.store.pojo

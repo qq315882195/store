@@ -1,0 +1,11 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: store-service
+logging:
+  level:
+    org.springframework.web: DEBUG
+    com.fasterxml.jackson: DEBUG
+    com.example.store.mapper: DEBUG
+
