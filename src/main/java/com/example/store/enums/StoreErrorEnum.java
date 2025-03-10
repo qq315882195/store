@@ -1,8 +1,8 @@
 package com.example.store.enums;
 
 public enum StoreErrorEnum {
-    OPERATION_ERROR("0001", "操作异常")
-    ;
+    OPERATION_ERROR("0001", "操作异常"),
+    STORE_NOT_EXIST("0002","门店信息不存在" );
 
     private String code;
     private String desc;

@@ -11,4 +11,5 @@ public class PageInfoResponse<T> implements Serializable {
     private long total;
     private long size;
     private long current;
+    private long pages;
 }

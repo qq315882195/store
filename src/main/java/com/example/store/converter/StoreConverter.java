@@ -18,6 +18,7 @@ public class StoreConverter {
         store.setLongitude(storeDTO.getLongitude());
         store.setLatitude(storeDTO.getLatitude());
         store.setMechantId(storeDTO.getMechantId());
+        store.setId(storeDTO.getId());
         return store;
     }
 
